@@ -32,10 +32,15 @@ export interface ICalcPriceArgs {
    */
   complexity: number;
   /**
+   * Additional coefficient for traders.
+   * For example, if you want to calculate the price for selling
+   * to a trader, you can set this to 0.5.
+   */
+  traderCoefficient: number;
+  /**
    * Item balance coefficient. Optional. Default is 1.
    */
   balanceCoefficient?: number;
-  traderCoefficient: number;
 }
 
 /**
@@ -56,8 +61,8 @@ export function calcPrice({
   time,
   availability,
   complexity,
-  balanceCoefficient = 1,
   traderCoefficient,
+  balanceCoefficient = 1,
 }: ICalcPriceArgs): Gold {
   const raw =
     rarity *

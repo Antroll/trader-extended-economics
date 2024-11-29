@@ -8,4 +8,5 @@ export function createFile(path: string, data: string): void {
   }
 
   fs.writeFileSync(path, data, 'utf-8');
+  console.log(`JSON-file sucessfuly created: ${path}`);
 }

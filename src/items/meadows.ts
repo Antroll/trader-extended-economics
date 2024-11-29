@@ -7,7 +7,6 @@ export const meadowsItems: IItem[] = [
     time: 1,
     availability: 1,
     complexity: 1,
-    balanceCoefficient: 1,
     stack: 50,
     sellable: false,
   },

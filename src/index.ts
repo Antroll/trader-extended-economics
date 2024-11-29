@@ -1,6 +1,7 @@
 import { meadowsItems } from './items/meadows';
 import { IProcessedItem } from './types';
 import { calcPrice } from './utils/calcPrice';
+import { converToJson } from './utils/converToJson';
 import { createFile } from './utils/createFile';
 
 const DIST_FOLDER = './dist';
@@ -17,15 +18,18 @@ const HALDOR_SELL_FILE = 'shudnal.TradersExtended.haldor.sell.json';
 const haldorBuyFilePath = `${DIST_FOLDER}/${HALDOR_BUY_FILE}`;
 const haldorSellFilePath = `${DIST_FOLDER}/${HALDOR_SELL_FILE}`;
 
-const itemsTobuyFromHaldor = meadowsItems.map<IProcessedItem>(item => {
+const HALDOR_TO_BUY_COEFFICIENT = 2;
+const HALDOR_TO_SELL_COEFFICIENT = 0.5;
+
+const itemsToBuyFromHaldor = meadowsItems.map<IProcessedItem>(item => {
   return {
     prefab: item.prefab,
+    stack: item.stack || 1,
     price: calcPrice({
       ...item,
-      balanceCoefficient: item.stack,
-      traderCoefficient: 3,
+      balanceCoefficient: item.balanceCoefficient || item.stack,
+      traderCoefficient: HALDOR_TO_BUY_COEFFICIENT,
     }),
-    stack: item.stack || 1,
   };
 });
 
@@ -34,16 +38,13 @@ const itemsToSellToHaldor = meadowsItems
   .map<IProcessedItem>(item => {
     return {
       prefab: item.prefab,
+      stack: 1,
       price: calcPrice({
         ...item,
-        traderCoefficient: 0.5,
+        traderCoefficient: HALDOR_TO_SELL_COEFFICIENT,
       }),
-      stack: 1,
     };
   });
 
-createFile(haldorBuyFilePath, JSON.stringify(itemsTobuyFromHaldor, null, 2));
-console.log(`JSON-file sucessfuly created: ${haldorBuyFilePath}`);
-
-createFile(haldorSellFilePath, JSON.stringify(itemsToSellToHaldor, null, 2));
-console.log(`JSON-file sucessfuly created: ${haldorSellFilePath}`);
+createFile(haldorBuyFilePath, converToJson(itemsToBuyFromHaldor));
+createFile(haldorSellFilePath, converToJson(itemsToSellToHaldor));
