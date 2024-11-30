@@ -67,4 +67,16 @@ export const materials: IItem[] = [
       amountToSell: 10,
     },
   },
+  {
+    prefab: 'QueenBee',
+    stack: 20,
+    sellable: true,
+    pricing: {
+      rarity: 3,
+      time: 1000,
+      availability: 1,
+      complexity: 1,
+      amountToSell: 1,
+    },
+  },
 ];

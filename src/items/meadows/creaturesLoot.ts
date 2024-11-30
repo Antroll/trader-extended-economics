@@ -113,4 +113,26 @@ export const creaturesLoot: IItem[] = [
       balanceCoefficient: BOSS_PRICE_BALANCE_MULTIPLIER,
     },
   },
+  {
+    prefab: 'DeerMeat',
+    stack: 20,
+    pricing: {
+      rarity: 1,
+      time: 30,
+      availability: 1,
+      complexity: 1.5,
+      amountToSell: 10,
+    },
+  },
+  {
+    prefab: 'RawMeat',
+    stack: 20,
+    pricing: {
+      rarity: 1,
+      time: 20,
+      availability: 1,
+      complexity: 1,
+      amountToSell: 20,
+    },
+  },
 ];

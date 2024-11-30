@@ -3,4 +3,8 @@ import { creaturesLoot } from './creaturesLoot';
 import { food } from './food';
 import { materials } from './materials';
 
-export const meadowsItems: IItem[] = [...materials, ...food, ...creaturesLoot];
+export const blackForestItems: IItem[] = [
+  ...materials,
+  ...food,
+  ...creaturesLoot,
+];

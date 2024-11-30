@@ -45,10 +45,6 @@ export interface ICalcPriceArgs {
    * Item balance coefficient. Optional. Default is 1.
    */
   balanceCoefficient?: number;
-  /**
-   * How much of the item is needed. Optional. Default is 1.
-   */
-  need?: number;
 }
 
 /**
@@ -71,7 +67,6 @@ export function calcPrice({
   complexity,
   traderCoefficient,
   balanceCoefficient = 1,
-  need = 1,
   stack,
 }: ICalcPriceArgs): Gold {
   const raw =
@@ -80,7 +75,6 @@ export function calcPrice({
     availability *
     complexity *
     balanceCoefficient *
-    traderCoefficient *
-    need;
+    traderCoefficient;
   return Math.round(raw);
 }

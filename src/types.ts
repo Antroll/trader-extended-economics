@@ -7,6 +7,8 @@ export interface IItem {
   stack?: number;
   sellable?: boolean;
   buyable?: boolean;
+  globalKeyToSell?: TGlobalKey;
+  globalKeyToBuy?: TGlobalKey;
   pricing: Omit<ICalcPriceArgs, 'traderCoefficient' | 'stack'> & {
     amountToSell?: number;
   };
