@@ -2,10 +2,14 @@ import { ICalcPriceArgs } from './utils/calcPrice';
 
 export type Gold = number;
 
-export interface IItem extends Omit<ICalcPriceArgs, 'traderCoefficient'> {
+export interface IItem {
   prefab: string;
-  sellable: boolean;
   stack?: number;
+  sellable?: boolean;
+  buyable?: boolean;
+  pricing: Omit<ICalcPriceArgs, 'traderCoefficient' | 'stack'> & {
+    amountToSell?: number;
+  };
 }
 
 export const OGlobalKey = {

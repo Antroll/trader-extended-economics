@@ -12,9 +12,13 @@ export interface ICalcPriceArgs {
    */
   rarity: number;
   /**
-   * How much time it takes to get the item in minutes.
+   * How much time it takes to get the stack in minutes.
    */
   time: number;
+  /**
+   * Stack size.
+   */
+  stack: number;
   /**
    * How available the item is. 1-3.
    *
@@ -24,7 +28,7 @@ export interface ICalcPriceArgs {
    */
   availability: number;
   /**
-   * The complexity of creation. 1-3.
+   * The complexity of creation / obtaining. 1-3.
    *
    * 1 - simple;
    * 2 - medium;
@@ -41,6 +45,10 @@ export interface ICalcPriceArgs {
    * Item balance coefficient. Optional. Default is 1.
    */
   balanceCoefficient?: number;
+  /**
+   * How much of the item is needed. Optional. Default is 1.
+   */
+  need?: number;
 }
 
 /**
@@ -63,13 +71,16 @@ export function calcPrice({
   complexity,
   traderCoefficient,
   balanceCoefficient = 1,
+  need = 1,
+  stack,
 }: ICalcPriceArgs): Gold {
   const raw =
     rarity *
-    time *
+    Math.max((time / stack) * 2, 0.65) *
     availability *
     complexity *
     balanceCoefficient *
-    traderCoefficient;
-  return Math.round(raw * 10) / 10;
+    traderCoefficient *
+    need;
+  return Math.round(raw);
 }

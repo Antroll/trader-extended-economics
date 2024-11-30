@@ -18,33 +18,47 @@ const HALDOR_SELL_FILE = 'shudnal.TradersExtended.haldor.sell.json';
 const haldorBuyFilePath = `${DIST_FOLDER}/${HALDOR_BUY_FILE}`;
 const haldorSellFilePath = `${DIST_FOLDER}/${HALDOR_SELL_FILE}`;
 
-const HALDOR_TO_BUY_COEFFICIENT = 2;
-const HALDOR_TO_SELL_COEFFICIENT = 0.5;
+const HALDOR_TO_BUY_COEFFICIENT = 1;
+const HALDOR_TO_SELL_COEFFICIENT = 0.33;
+const SELL_STACK = 1;
 
-const itemsToBuyFromHaldor = meadowsItems.map<IProcessedItem>(item => {
-  return {
-    prefab: item.prefab,
-    stack: item.stack || 1,
-    price: calcPrice({
-      ...item,
-      balanceCoefficient: item.balanceCoefficient || item.stack,
-      traderCoefficient: HALDOR_TO_BUY_COEFFICIENT,
-    }),
-  };
-});
+const itemsToBuyFromHaldor = [...meadowsItems].filter(
+  item => typeof item.buyable === 'undefined' && item.buyable !== false,
+);
 
-const itemsToSellToHaldor = meadowsItems
-  .filter(item => item.sellable)
-  .map<IProcessedItem>(item => {
+const processedItemsToBuyFromHaldor = itemsToBuyFromHaldor.map<IProcessedItem>(
+  item => {
+    const { pricing, stack = 1 } = item;
+    const { balanceCoefficient = 1, amountToSell = 1 } = pricing;
     return {
       prefab: item.prefab,
-      stack: 1,
+      stack: amountToSell,
       price: calcPrice({
-        ...item,
-        traderCoefficient: HALDOR_TO_SELL_COEFFICIENT,
+        ...pricing,
+        traderCoefficient: HALDOR_TO_BUY_COEFFICIENT,
+        balanceCoefficient: balanceCoefficient * amountToSell,
+        stack,
       }),
     };
-  });
+  },
+);
 
-createFile(haldorBuyFilePath, converToJson(itemsToBuyFromHaldor));
-createFile(haldorSellFilePath, converToJson(itemsToSellToHaldor));
+const itemsToSellToHaldor = [...meadowsItems].filter(item => item.sellable);
+
+const processedItemsToSellToHaldor = itemsToSellToHaldor.map<IProcessedItem>(
+  item => {
+    const { pricing, stack = 1 } = item;
+    return {
+      prefab: item.prefab,
+      stack: SELL_STACK,
+      price: calcPrice({
+        ...pricing,
+        traderCoefficient: HALDOR_TO_SELL_COEFFICIENT,
+        stack,
+      }),
+    };
+  },
+);
+
+createFile(haldorBuyFilePath, converToJson(processedItemsToBuyFromHaldor));
+createFile(haldorSellFilePath, converToJson(processedItemsToSellToHaldor));
