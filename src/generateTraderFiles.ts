@@ -1,6 +1,7 @@
 import { DIST_FOLDER } from './const';
 import { blackForestItems } from './items/black-forest';
 import { meadowsItems } from './items/meadows';
+import { swampItems } from './items/swamp';
 import { IProcessedItem } from './types';
 import { calcPrice } from './utils/calcPrice';
 import { converToJson } from './utils/converToJson';
@@ -23,7 +24,7 @@ const HALDOR_TO_BUY_COEFFICIENT = 1;
 const HALDOR_TO_SELL_COEFFICIENT = 0.33;
 const SELL_STACK = 1;
 
-const allItems = [...meadowsItems, ...blackForestItems];
+const allItems = [...meadowsItems, ...blackForestItems, ...swampItems];
 
 const itemsToBuyFromHaldor = allItems.filter(
   item => typeof item.buyable === 'undefined' || item.buyable !== false,

@@ -79,4 +79,15 @@ export const materials: IItem[] = [
       amountToSell: 1,
     },
   },
+  {
+    prefab: 'Coal',
+    stack: 50,
+    pricing: {
+      rarity: 1,
+      time: 30,
+      availability: 1,
+      complexity: 2,
+      amountToSell: 25,
+    },
+  },
 ];

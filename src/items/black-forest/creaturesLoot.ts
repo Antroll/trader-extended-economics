@@ -1,3 +1,4 @@
+import { BOSS_PRICE_BALANCE_MULTIPLIER } from '../../const';
 import { IItem, OGlobalKey } from '../../types';
 
 export const creaturesLoot: IItem[] = [
@@ -67,6 +68,21 @@ export const creaturesLoot: IItem[] = [
       amountToSell: 5,
       availability: 1.5,
       complexity: 2.5,
+    },
+  },
+  {
+    prefab: 'TrophyTheElder',
+    stack: 20,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    sellable: true,
+    buyable: false,
+    pricing: {
+      rarity: 1,
+      time: 60,
+      amountToSell: 1,
+      availability: 1.5,
+      complexity: 2.5,
+      balanceCoefficient: BOSS_PRICE_BALANCE_MULTIPLIER,
     },
   },
 ];
