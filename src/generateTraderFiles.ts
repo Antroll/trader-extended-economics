@@ -9,6 +9,7 @@ import { blackForestItems } from './items/black-forest';
 import { meadowsItems } from './items/meadows';
 import { mountainsItems } from './items/mountains';
 import { oceanItems } from './items/ocean';
+import { plainsItems } from './items/plains';
 import { swampItems } from './items/swamp';
 import { IProcessedItem } from './types';
 import { calcPrice } from './utils/calcPrice';
@@ -26,6 +27,7 @@ const allItems = [
   ...oceanItems,
   ...swampItems,
   ...mountainsItems,
+  ...plainsItems,
 ];
 
 const itemsToBuyFromHaldor = allItems.filter(
