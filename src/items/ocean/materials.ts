@@ -3,8 +3,9 @@ import { IItem, OGlobalKey } from '../../types';
 export const materials: IItem[] = [
   {
     prefab: 'Chitin',
-    globalKeyToBuy: OGlobalKey.defeatedTheElder,
     stack: 50,
+    sellable: true,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
     pricing: {
       rarity: 3,
       time: 90,

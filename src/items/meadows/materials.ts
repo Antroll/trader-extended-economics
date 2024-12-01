@@ -1,4 +1,4 @@
-import { IItem } from '../../types';
+import { IItem, OGlobalKey } from '../../types';
 
 export const materials: IItem[] = [
   {
@@ -71,6 +71,7 @@ export const materials: IItem[] = [
     prefab: 'QueenBee',
     stack: 20,
     sellable: true,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
     pricing: {
       rarity: 3,
       time: 1000,

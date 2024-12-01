@@ -23,4 +23,15 @@ export const food: IItem[] = [
       amountToSell: 5,
     },
   },
+  {
+    prefab: 'Honey',
+    stack: 50,
+    pricing: {
+      rarity: 1,
+      time: 120,
+      availability: 1,
+      complexity: 2,
+      amountToSell: 10,
+    },
+  },
 ];

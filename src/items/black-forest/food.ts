@@ -34,7 +34,7 @@ export const food: IItem[] = [
       time: 120,
       amountToSell: 5,
       availability: 1.5,
-      complexity: 2,
+      complexity: 3,
     },
   },
 ];

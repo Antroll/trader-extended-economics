@@ -37,4 +37,19 @@ export const materials: IItem[] = [
       amountToSell: 10,
     },
   },
+  {
+    prefab: 'IronScrap',
+    stack: 30,
+    sellable: true,
+    globalKeyToBuy: OGlobalKey.defeatedBonemass,
+    globalKeyToSell: OGlobalKey.defeatedTheElder,
+    pricing: {
+      rarity: 2,
+      time: 30,
+      availability: 2,
+      complexity: 2,
+      amountToSell: 10,
+      balanceCoefficient: 2,
+    },
+  },
 ];

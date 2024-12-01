@@ -4,35 +4,35 @@ export interface ICalcPriceArgs {
   /**
    * Item rarity. 1-5
    *
-   * common: 1;
-   * uncommon: 2;
-   * rare: 3;
-   * epic: 4;
-   * legendary: 5;
+   * - 1 - common;
+   * - 2 - uncommon;
+   * - 3 - rare;
+   * - 4 - epic;
+   * - 5 - legendary;
    */
   rarity: number;
   /**
-   * How much time it takes to get the stack in minutes.
+   * How much time it takes to get the amount in the `stack` field in minutes.
    */
   time: number;
   /**
-   * Stack size.
+   * Stack size. It is used to calculate the price of the item.
    */
   stack: number;
   /**
    * How available the item is. 1-3.
    *
-   * 1 - early game (meadows, black forest);
-   * 2 - mid game (swamp, mountain);
-   * 3 - late game (plains, mistlands, ashlands);
+   * - 1 - early game (meadows, black forest);
+   * - 2 - mid game (swamp, mountain);
+   * - 3 - late game (plains, mistlands, ashlands);
    */
   availability: number;
   /**
    * The complexity of creation / obtaining. 1-3.
    *
-   * 1 - simple;
-   * 2 - medium;
-   * 3 - hard;
+   * - 1 - simple;
+   * - 2 - medium;
+   * - 3 - hard;
    */
   complexity: number;
   /**
@@ -42,7 +42,10 @@ export interface ICalcPriceArgs {
    */
   traderCoefficient: number;
   /**
-   * Item balance coefficient. Optional. Default is 1.
+   * Item balance coefficient. Can be used to adjust the price
+   * if you think the item is too cheap or too expensive.
+   *
+   * Optional. Default is 1.
    */
   balanceCoefficient?: number;
 }

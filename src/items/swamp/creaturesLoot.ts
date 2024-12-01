@@ -64,7 +64,7 @@ export const creaturesLoot: IItem[] = [
       rarity: 3,
       time: 240,
       availability: 2,
-      complexity: 2.5,
+      complexity: 2.2,
       amountToSell: 1,
     },
   },

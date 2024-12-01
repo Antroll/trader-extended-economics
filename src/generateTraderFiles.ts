@@ -1,6 +1,13 @@
-import { DIST_FOLDER } from './const';
+import {
+  DIST_FOLDER,
+  HALDOR_BUY_FILE,
+  HALDOR_SELL_FILE,
+  HALDOR_TO_BUY_COEFFICIENT,
+  HALDOR_TO_SELL_COEFFICIENT,
+} from './const';
 import { blackForestItems } from './items/black-forest';
 import { meadowsItems } from './items/meadows';
+import { mountainsItems } from './items/mountains';
 import { oceanItems } from './items/ocean';
 import { swampItems } from './items/swamp';
 import { IProcessedItem } from './types';
@@ -8,21 +15,9 @@ import { calcPrice } from './utils/calcPrice';
 import { converToJson } from './utils/converToJson';
 import { createFile } from './utils/createFile';
 
-/**
- * Buy from Haldor
- */
-const HALDOR_BUY_FILE = 'shudnal.TradersExtended.haldor.buy.json';
-
-/**
- * Sell to Haldor
- */
-const HALDOR_SELL_FILE = 'shudnal.TradersExtended.haldor.sell.json';
-
 const haldorBuyFilePath = `${DIST_FOLDER}/${HALDOR_BUY_FILE}`;
 const haldorSellFilePath = `${DIST_FOLDER}/${HALDOR_SELL_FILE}`;
 
-const HALDOR_TO_BUY_COEFFICIENT = 1;
-const HALDOR_TO_SELL_COEFFICIENT = 0.33;
 const SELL_STACK = 1;
 
 const allItems = [
@@ -30,6 +25,7 @@ const allItems = [
   ...blackForestItems,
   ...oceanItems,
   ...swampItems,
+  ...mountainsItems,
 ];
 
 const itemsToBuyFromHaldor = allItems.filter(

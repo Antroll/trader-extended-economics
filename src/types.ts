@@ -4,12 +4,25 @@ export type Gold = number;
 
 export interface IItem {
   prefab: string;
+  /**
+   * Stack size of the item.
+   *
+   * It is used to calculate the price of the item.
+   *
+   * Default: 1
+   */
   stack?: number;
   sellable?: boolean;
   buyable?: boolean;
   globalKeyToSell?: TGlobalKey;
   globalKeyToBuy?: TGlobalKey;
+  /**
+   * This configuration is used to calculate the price of the item.
+   */
   pricing: Omit<ICalcPriceArgs, 'traderCoefficient' | 'stack'> & {
+    /**
+     * The amount of items that will be added to the trader's sell list.
+     */
     amountToSell?: number;
   };
 }

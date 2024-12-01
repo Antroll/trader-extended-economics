@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx ts-node src/index.ts",
+    "build": "yarn check-types && npx ts-node src/index.ts",
     "deploy": "yarn build && npx ts-node src/deploy.ts",
-    "clear": "rm -rf dist"
+    "clear": "rm -rf dist",
+    "check-types": "tsc --noEmit"
   },
   "author": "Antroll",
   "license": "MIT",
