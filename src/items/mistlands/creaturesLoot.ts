@@ -118,18 +118,6 @@ export const creaturesLoot: IItem[] = [
     },
   },
   {
-    prefab: 'Mandible',
-    stack: 50,
-    globalKeyToBuy: OGlobalKey.defeatedYagluth,
-    pricing: {
-      rarity: 3,
-      time: 120,
-      availability: 3.5,
-      complexity: 3,
-      amountToSell: 5,
-    },
-  },
-  {
     prefab: 'TrophySeekerBrute',
     stack: 20,
     sellable: true,
