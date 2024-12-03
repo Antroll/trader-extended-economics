@@ -111,7 +111,7 @@ export const creaturesLoot: IItem[] = [
   {
     prefab: 'Chain',
     stack: 50,
-    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    globalKeyToBuy: OGlobalKey.defeatedBonemass,
     pricing: {
       rarity: 3,
       time: 180,

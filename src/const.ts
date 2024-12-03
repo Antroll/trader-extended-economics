@@ -1,12 +1,12 @@
 /**
  * Multiplier that affects the traders prices when you want to buy something.
  */
-export const HALDOR_TO_BUY_COEFFICIENT = 1;
+export const HALDOR_TO_BUY_COEFFICIENT = 1.2;
 
 /**
  * Multiplier that affects the traders prices when you want to sell something.
  */
-export const HALDOR_TO_SELL_COEFFICIENT = 0.3;
+export const HALDOR_TO_SELL_COEFFICIENT = 0.2;
 
 /**
  * Multiplier that affects the price of the loot from bosses.

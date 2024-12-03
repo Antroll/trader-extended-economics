@@ -4,7 +4,7 @@ export const materials: IItem[] = [
   {
     prefab: 'Guck',
     stack: 50,
-    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    globalKeyToBuy: OGlobalKey.defeatedBonemass,
     pricing: {
       rarity: 2,
       time: 90,
@@ -16,7 +16,7 @@ export const materials: IItem[] = [
   {
     prefab: 'ElderBark',
     stack: 50,
-    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    globalKeyToBuy: OGlobalKey.defeatedBonemass,
     pricing: {
       rarity: 1,
       time: 10,
@@ -28,7 +28,7 @@ export const materials: IItem[] = [
   {
     prefab: 'WitheredBone',
     stack: 30,
-    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    globalKeyToBuy: OGlobalKey.defeatedBonemass,
     pricing: {
       rarity: 2,
       time: 60,
