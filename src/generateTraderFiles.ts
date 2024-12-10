@@ -4,6 +4,7 @@ import {
   HALDOR_SELL_FILE,
   HALDOR_TO_BUY_COEFFICIENT,
   HALDOR_TO_SELL_COEFFICIENT,
+  IS_THERZIE_MODS_ACTIVE,
 } from './const';
 import { blackForestItems } from './items/black-forest';
 import { meadowsItems } from './items/meadows';
@@ -12,6 +13,7 @@ import { mountainsItems } from './items/mountains';
 import { oceanItems } from './items/ocean';
 import { plainsItems } from './items/plains';
 import { swampItems } from './items/swamp';
+import { therzieItems } from './mods/therzie';
 import { IProcessedItem } from './types';
 import { calcPrice } from './utils/calcPrice';
 import { converToJson } from './utils/converToJson';
@@ -30,6 +32,7 @@ const allItems = [
   ...mountainsItems,
   ...plainsItems,
   ...mistlandsItems,
+  ...(IS_THERZIE_MODS_ACTIVE ? therzieItems : []),
 ];
 
 const itemsToBuyFromHaldor = allItems.filter(

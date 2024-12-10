@@ -33,3 +33,8 @@ export const DIST_FOLDER = './dist';
  */
 export const VALHEIM_BEPIEX_CONFIG_PATH =
   'C:/Users/Anton/AppData/Roaming/r2modmanPlus-local/Valheim/profiles/My Ashlands/BepInEx/config';
+
+/**
+ * If this is set to true, the prices for Therzie mods will be generated.
+ */
+export const IS_THERZIE_MODS_ACTIVE = true;
