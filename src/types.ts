@@ -12,7 +12,13 @@ export interface IItem {
    * Default: 1
    */
   stack?: number;
+  /**
+   * default: false
+   */
   sellable?: boolean;
+  /**
+   * default: true
+   */
   buyable?: boolean;
   globalKeyToSell?: TGlobalKey;
   globalKeyToBuy?: TGlobalKey;

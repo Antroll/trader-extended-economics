@@ -45,11 +45,11 @@ export const creaturesLoot: IItem[] = [
     },
   },
   {
-    prefab: 'TrophyForestTroll',
+    prefab: 'TrophyFrostTroll',
     stack: 20,
     sellable: true,
-    buyable: false,
     globalKeyToSell: OGlobalKey.defeatedEikthyr,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
     pricing: {
       rarity: 3,
       time: 120,
