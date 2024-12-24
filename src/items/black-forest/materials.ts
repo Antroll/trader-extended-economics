@@ -2,6 +2,46 @@ import { IItem, OGlobalKey } from '../../types';
 
 export const materials: IItem[] = [
   {
+    prefab: 'Amber',
+    stack: 20,
+    buyable: false,
+    sellable: true,
+    pricing: {
+      rarity: 3,
+      time: 40,
+      amountToSell: 1,
+      availability: 1.5,
+      complexity: 1,
+    },
+  },
+  {
+    prefab: 'AmberPearl',
+    stack: 50,
+    buyable: false,
+    sellable: true,
+    pricing: {
+      rarity: 3,
+      time: 160,
+      amountToSell: 1,
+      availability: 1.5,
+      complexity: 1,
+      balanceCoefficient: 2,
+    },
+  },
+  {
+    prefab: 'Ruby',
+    stack: 20,
+    sellable: true,
+    pricing: {
+      rarity: 3,
+      time: 120,
+      amountToSell: 1,
+      availability: 1.5,
+      complexity: 1,
+      balanceCoefficient: 2,
+    },
+  },
+  {
     prefab: 'Thistle',
     stack: 50,
     globalKeyToBuy: OGlobalKey.defeatedEikthyr,

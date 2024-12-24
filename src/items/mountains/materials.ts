@@ -55,4 +55,16 @@ export const materials: IItem[] = [
       amountToSell: 10,
     },
   },
+  {
+    prefab: 'SilverNecklace',
+    stack: 20,
+    sellable: true,
+    pricing: {
+      rarity: 4,
+      time: 120,
+      amountToSell: 1,
+      availability: 2.5,
+      complexity: 1.5,
+    },
+  },
 ];
