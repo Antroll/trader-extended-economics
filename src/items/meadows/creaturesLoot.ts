@@ -5,7 +5,6 @@ export const creaturesLoot: IItem[] = [
   {
     prefab: 'LeatherScraps',
     stack: 50,
-    sellable: true,
     pricing: {
       rarity: 2,
       time: 30,
@@ -108,9 +107,8 @@ export const creaturesLoot: IItem[] = [
       rarity: 1,
       time: 45,
       availability: 1.5,
-      complexity: 3,
+      complexity: 2,
       amountToSell: 1,
-      balanceCoefficient: BOSS_PRICE_BALANCE_MULTIPLIER,
     },
   },
   {

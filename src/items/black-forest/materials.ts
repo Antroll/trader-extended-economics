@@ -56,9 +56,7 @@ export const materials: IItem[] = [
   {
     prefab: 'SurtlingCore',
     stack: 10,
-    sellable: true,
     globalKeyToBuy: OGlobalKey.defeatedTheElder,
-    globalKeyToSell: OGlobalKey.defeatedEikthyr,
     pricing: {
       rarity: 3,
       time: 40,
