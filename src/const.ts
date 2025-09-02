@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 /**
  * Multiplier that affects the traders prices when you want to buy something.
  */
@@ -29,12 +33,13 @@ export const HALDOR_SELL_FILE = 'shudnal.TradersExtended.haldor.sell.json';
 export const DIST_FOLDER = './dist';
 
 /**
- * Path to the BepInEx config folder where the files will be copied to.
+ * Path to the Valheim profile.
+ * Can be set in `.env` file. See description in `README.md`.
  */
-export const VALHEIM_BEPIEX_CONFIG_PATH =
-  'C:/Users/Anton/AppData/Roaming/r2modmanPlus-local/Valheim/profiles/My Ashlands/BepInEx/config';
+export const PROFILE_PATH = process.env.PROFILE_PATH;
 
 /**
  * If this is set to true, the prices for Therzie mods will be generated.
  */
-export const IS_THERZIE_MODS_ACTIVE = true;
+export const IS_THERZIE_MODS_ACTIVE =
+  process.env.IS_THERZIE_MODS_ACTIVE === 'true';

@@ -5,10 +5,16 @@ This application allows you to generate a configuration for the [Trader Extended
 ## Installation
 
 1. Clone the repository to your local machine.
-2. Run `npm install` to install the dependencies.
+2. Install dependencies: `yarn install`
+3. Copy `.env.example` to `.env` and set `PROFILE_PATH` to your Valheim profile path (where `BepInEx` lives).
 
 ## Usage
 
-1. Run `npm run build` to generate the configuration.
+1. Run `yarn build` to generate the configuration.
 2. The configuration will be saved to `dist` folder.
-3. Copy the configuration to the `BepInEx/config` folder of your Valheim installation. Or you can configure the path and script automatically copies the file for you. Run `npm run deploy` to copy the configuration to the Valheim installation.
+
+### Automatic deployment
+
+Create `.env`, copy from `.env.example` and set `PROFILE_PATH` to your Valheim profile path (where `BepInEx` lives).
+
+To copy the generated files automatically to `BepInEx/config`, run `yarn deploy`.
