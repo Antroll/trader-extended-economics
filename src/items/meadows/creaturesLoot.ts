@@ -27,7 +27,6 @@ export const creaturesLoot: IItem[] = [
   {
     prefab: 'DeerHide',
     stack: 50,
-    sellable: true,
     pricing: {
       rarity: 1,
       time: 60,
@@ -39,7 +38,6 @@ export const creaturesLoot: IItem[] = [
   {
     prefab: 'NeckTail',
     stack: 50,
-    sellable: true,
     pricing: {
       rarity: 1.5,
       time: 45,

@@ -58,7 +58,6 @@ export const materials: IItem[] = [
   {
     prefab: 'SilverNecklace',
     stack: 20,
-    sellable: true,
     globalKeyToBuy: OGlobalKey.defeatedModer,
     pricing: {
       rarity: 4,
