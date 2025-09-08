@@ -150,4 +150,40 @@ export const creaturesLoot: IItem[] = [
       complexity: 2,
     },
   },
+  {
+    prefab: 'BjornPaw',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    pricing: {
+      rarity: 2,
+      time: 60,
+      amountToSell: 2,
+      availability: 1.5,
+      complexity: 2,
+    },
+  },
+  {
+    prefab: 'BjornMeat',
+    stack: 20,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    pricing: {
+      rarity: 2,
+      time: 40,
+      amountToSell: 5,
+      availability: 1.5,
+      complexity: 2,
+    },
+  },
+  {
+    prefab: 'BjornHide',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    pricing: {
+      rarity: 2,
+      time: 30,
+      amountToSell: 10,
+      availability: 1.5,
+      complexity: 2,
+    },
+  },
 ];
