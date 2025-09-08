@@ -17,6 +17,18 @@ export const creaturesLoot: IItem[] = [
     },
   },
   {
+    prefab: 'GreydwarfEye',
+    stack: 50,
+    globalKeyToSell: OGlobalKey.defeatedEikthyr,
+    pricing: {
+      rarity: 1,
+      time: 20,
+      amountToSell: 25,
+      availability: 1.5,
+      complexity: 1.5,
+    },
+  },
+  {
     prefab: 'TrophyGreydwarfBrute',
     stack: 20,
     sellable: true,
@@ -123,6 +135,19 @@ export const creaturesLoot: IItem[] = [
       availability: 1.5,
       complexity: 2.5,
       balanceCoefficient: BOSS_PRICE_BALANCE_MULTIPLIER,
+    },
+  },
+  {
+    prefab: 'TrophyBjorn',
+    stack: 20,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
+    sellable: true,
+    pricing: {
+      rarity: 3,
+      time: 120,
+      amountToSell: 1,
+      availability: 1.5,
+      complexity: 2,
     },
   },
 ];
