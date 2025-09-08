@@ -128,6 +128,33 @@ export const creaturesLoot: IItem[] = [
     },
   },
   {
+    prefab: 'TrophyBjornUndead',
+    stack: 20,
+    sellable: true,
+    globalKeyToBuy: OGlobalKey.defeatedModer,
+    globalKeyToSell: OGlobalKey.defeatedModer,
+    pricing: {
+      rarity: 3,
+      time: 400,
+      availability: 3,
+      complexity: 2,
+      amountToSell: 1,
+      balanceCoefficient: 0.9,
+    },
+  },
+  {
+    prefab: 'UndeadBjornRibcage',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedModer,
+    pricing: {
+      rarity: 2,
+      time: 60,
+      availability: 3,
+      complexity: 2,
+      amountToSell: 10,
+    },
+  },
+  {
     prefab: 'TrophyGoblinKing',
     stack: 20,
     sellable: true,
