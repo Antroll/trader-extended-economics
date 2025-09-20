@@ -1,0 +1,148 @@
+import { IItem, OGlobalKey } from '../../types';
+
+export const materials: IItem[] = [
+  {
+    prefab: 'ProustitePowder',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedQueen,
+    pricing: {
+      rarity: 2,
+      time: 60,
+      availability: 3.5,
+      complexity: 1.5,
+      amountToSell: 5,
+    },
+  },
+  {
+    prefab: 'Blackwood',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedQueen,
+    pricing: {
+      rarity: 1,
+      time: 20,
+      availability: 3.5,
+      complexity: 1,
+      amountToSell: 20,
+    },
+  },
+  {
+    prefab: 'CharcoalResin',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedQueen,
+    pricing: {
+      rarity: 2,
+      time: 40,
+      availability: 3.5,
+      complexity: 1,
+      amountToSell: 10,
+    },
+  },
+  {
+    prefab: 'FlametalOreNew',
+    stack: 30,
+    globalKeyToBuy: OGlobalKey.defeatedFader,
+    pricing: {
+      rarity: 2,
+      time: 30,
+      availability: 3.5,
+      complexity: 2,
+      amountToSell: 5,
+    },
+  },
+  {
+    prefab: 'Grausten',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedQueen,
+    pricing: {
+      rarity: 1,
+      time: 15,
+      availability: 3.5,
+      complexity: 1,
+      amountToSell: 25,
+    },
+  },
+  {
+    prefab: 'SulfurStone',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedQueen,
+    pricing: {
+      rarity: 2,
+      time: 30,
+      availability: 3.5,
+      complexity: 1,
+      amountToSell: 10,
+    },
+  },
+  {
+    prefab: 'MoltenCore',
+    stack: 20,
+    globalKeyToBuy: OGlobalKey.defeatedQueen,
+    pricing: {
+      rarity: 2,
+      time: 60,
+      availability: 3.5,
+      complexity: 2,
+      amountToSell: 1,
+    },
+  },
+  {
+    prefab: 'GemstoneBlue',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedFader,
+    pricing: {
+      rarity: 5,
+      time: 400,
+      availability: 3.5,
+      complexity: 3,
+      amountToSell: 1,
+    },
+  },
+  {
+    prefab: 'GemstoneGreen',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedFader,
+    pricing: {
+      rarity: 5,
+      time: 400,
+      availability: 3.5,
+      complexity: 3,
+      amountToSell: 1,
+    },
+  },
+  {
+    prefab: 'GemstoneRed',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedFader,
+    pricing: {
+      rarity: 5,
+      time: 400,
+      availability: 3.5,
+      complexity: 3,
+      amountToSell: 1,
+    },
+  },
+  {
+    prefab: 'BellFragment',
+    stack: 9,
+    globalKeyToBuy: OGlobalKey.defeatedFader,
+    pricing: {
+      rarity: 5,
+      time: 120,
+      availability: 3.5,
+      complexity: 3,
+      amountToSell: 1,
+    },
+  },
+  {
+    prefab: 'Pot_Shard_Green',
+    stack: 50,
+    globalKeyToBuy: OGlobalKey.defeatedQueen,
+    pricing: {
+      rarity: 1.5,
+      time: 60,
+      availability: 3.5,
+      complexity: 1,
+      amountToSell: 5,
+    },
+  },
+];

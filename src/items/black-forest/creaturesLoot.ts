@@ -32,8 +32,9 @@ export const creaturesLoot: IItem[] = [
     prefab: 'TrophyGreydwarfBrute',
     stack: 20,
     sellable: true,
-    buyable: false,
+    buyable: true,
     globalKeyToSell: OGlobalKey.defeatedEikthyr,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
     pricing: {
       rarity: 4,
       time: 120,
@@ -46,8 +47,9 @@ export const creaturesLoot: IItem[] = [
     prefab: 'TrophyGreydwarfShaman',
     stack: 20,
     sellable: true,
-    buyable: false,
+    buyable: true,
     globalKeyToSell: OGlobalKey.defeatedEikthyr,
+    globalKeyToBuy: OGlobalKey.defeatedTheElder,
     pricing: {
       rarity: 3,
       time: 120,
@@ -60,6 +62,7 @@ export const creaturesLoot: IItem[] = [
     prefab: 'TrophyFrostTroll',
     stack: 20,
     sellable: true,
+    buyable: true,
     globalKeyToSell: OGlobalKey.defeatedEikthyr,
     globalKeyToBuy: OGlobalKey.defeatedTheElder,
     pricing: {

@@ -6,6 +6,7 @@ import {
   HALDOR_TO_SELL_COEFFICIENT,
   IS_THERZIE_MODS_ACTIVE,
 } from './const';
+import { ashlandsItems } from './items/ashlands';
 import { blackForestItems } from './items/black-forest';
 import { meadowsItems } from './items/meadows';
 import { mistlandsItems } from './items/mistlands';
@@ -32,6 +33,7 @@ const allItems = [
   ...mountainsItems,
   ...plainsItems,
   ...mistlandsItems,
+  ...ashlandsItems,
   ...(IS_THERZIE_MODS_ACTIVE ? therzieItems : []),
 ];
 
